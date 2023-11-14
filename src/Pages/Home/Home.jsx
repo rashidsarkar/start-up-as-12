@@ -5,9 +5,12 @@ import axiosInstance from "../../AxiosAPI/axiosInstance";
 import CustomLoading from "../../Components/CustomLoading";
 import FreqQusSection from "./FreqQusSection/FreqQusSection";
 import SectionDividerWithText from "../../Components/SectionDividerWithText";
+import useAuthProvider from "../../FireBase/useAuthProvider";
 // import useAxiosInstance from "../../AxiosAPI/useAxiosInstance";
 
 function Home() {
+  const { user } = useAuthProvider();
+  console.log(user);
   // const axiosInstance = useAxiosInstance();
 
   // const { data, isLoading, error } = useQuery({

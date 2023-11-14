@@ -70,7 +70,15 @@ function SignUp() {
 
   const handleGoogleSignUp = () => {
     googleSing()
-      .then(() => {
+      .then((currentUser) => {
+        console.log("google singUP", currentUser);
+        // setUser({
+        //   ...user,
+        //   displayName: currentUser.user.displayName,
+        //   photoURL: currentUser.user.photoURL,
+        //   email: currentUser.user.email,
+        //   uid: currentUser.user.uid,
+        // });
         swal("Success", "Signup successful!", "success");
         navigat("/");
       })

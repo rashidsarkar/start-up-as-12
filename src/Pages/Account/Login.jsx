@@ -18,6 +18,7 @@ function Login() {
     const password = form.get("password");
     loginEmPAss(email, password)
       .then((user) => {
+        console.log("login", user);
         swal("Success", "Login successful!", "success");
         navigat(preveLocation?.state || "/");
         // console.log(user.user);
@@ -30,7 +31,8 @@ function Login() {
 
   const handleGoogleSignIn = () => {
     googleSing()
-      .then(() => {
+      .then((currentUser) => {
+        console.log("google singin", currentUser);
         swal("Success", "Signup successful!", "success");
         navigat(preveLocation?.state || "/");
       })
