@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import CustomLoading from "../../../Components/CustomLoading";
 
 function FeatureSection({ feature }) {
-  const { date, title, description, image } = feature;
+  const { date, title, description, image } = feature || {};
   useEffect(() => {
     VanillaTilt.init(document.querySelectorAll(".carda"), {
       glare: true,
@@ -16,7 +16,7 @@ function FeatureSection({ feature }) {
   }, []);
 
   let cardStyle = {
-    backgroundImage: `url(${image})`,
+    backgroundImage: `url(${"https://i.ibb.co/0fdj1Mh/pexels-photo-110473.webp"})`,
   };
 
   return (
@@ -24,9 +24,9 @@ function FeatureSection({ feature }) {
       <div className="m-2 mx-auto carda lg:m-7 md:m-3 ">
         <div style={cardStyle} className="card-image quiz-image"></div>
         <div className="card-text">
-          <span className="date">{date}</span>
-          <h2>{title}</h2>
-          <p>{description}</p>
+          <span className="date">{`this is date`}</span>
+          <h2>{`this is title`}</h2>
+          <p>{`this is description this is description this is description this is description this is description this is description  `}</p>
         </div>
       </div>
     </div>

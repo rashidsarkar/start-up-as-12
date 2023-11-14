@@ -10,19 +10,19 @@ import SectionDividerWithText from "../../Components/SectionDividerWithText";
 function Home() {
   // const axiosInstance = useAxiosInstance();
 
-  const { data, isLoading, error } = useQuery({
-    queryFn: async () => {
-      const res = await axiosInstance.get("/api/features");
-      return res.data;
-    },
-    queryKey: ["Features"],
-  });
-  if (error) {
-    return error.message;
-  }
-  if (isLoading) {
-    return <CustomLoading></CustomLoading>;
-  }
+  // const { data, isLoading, error } = useQuery({
+  //   queryFn: async () => {
+  //     const res = await axiosInstance.get("/api/features");
+  //     return res.data;
+  //   },
+  //   queryKey: ["Features"],
+  // });
+  // if (error) {
+  //   return error.message;
+  // }
+  // if (isLoading) {
+  //   return <CustomLoading></CustomLoading>;
+  // }
 
   return (
     <div className="min-h-screen">
@@ -33,9 +33,10 @@ function Home() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 ">
-        {data.map((item) => (
+        {/* {data.map((item) => (
           <FeatureSection feature={item} key={item._id}></FeatureSection>
-        ))}
+        ))} */}
+        <FeatureSection></FeatureSection>
       </div>
       <FreqQusSection></FreqQusSection>
     </div>
