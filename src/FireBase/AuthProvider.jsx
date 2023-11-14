@@ -10,14 +10,14 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "./firebaseConfig ";
-// import axiosInstance from "../AxiosAPI/axiosInstance";
-import useAxiosInstance from "../AxiosAPI/useAxiosInstance";
+import axiosInstance from "../AxiosAPI/axiosInstance";
+// import useAxiosInstance from "../AxiosAPI/useAxiosInstance";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 function AuthProvider({ children }) {
-  const axiosInstance = useAxiosInstance();
+  // const axiosInstance = useAxiosInstance();
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

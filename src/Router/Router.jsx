@@ -6,6 +6,8 @@ import SignUp from "../Pages/Account/SignUp";
 
 import NotFound from "../Pages/NotFound ";
 import Home from "../Pages/Home/Home";
+import About from "../Components/About";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/about",
+        element: (
+          <PrivateRoute>
+            <About></About>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/Login",

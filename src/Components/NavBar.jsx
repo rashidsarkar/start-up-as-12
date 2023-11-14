@@ -44,7 +44,7 @@ function NavBar() {
               ? "text-[#87af58] font-semibold"
               : ""
           }
-          // to="/submittedAssignments"
+          to="/about"
         >
           About
         </NavLink>
