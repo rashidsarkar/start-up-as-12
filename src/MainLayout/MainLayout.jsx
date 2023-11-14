@@ -4,7 +4,7 @@ import Footer from "../Pages/Footer/Footer";
 
 function MainLayout() {
   return (
-    <div className="mx-auto max-w-7xl">
+    <div data-theme="cyberpunk" className="mx-auto max-w-7xl">
       <NavBar></NavBar>
       <Outlet></Outlet>
       <Footer></Footer>
