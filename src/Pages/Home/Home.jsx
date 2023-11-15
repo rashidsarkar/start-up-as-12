@@ -35,10 +35,12 @@ function Home() {
         description="Discover our amazing features and services."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 ">
+      <div className="grid grid-cols-1 p-4 md:grid-cols-3 md:gap-5">
         {/* {data.map((item) => (
           <FeatureSection feature={item} key={item._id}></FeatureSection>
         ))} */}
+        <FeatureSection></FeatureSection>
+        <FeatureSection></FeatureSection>
         <FeatureSection></FeatureSection>
       </div>
       <FreqQusSection></FreqQusSection>
